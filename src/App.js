@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import AddCharacter from "./AddCharacter";
+import "./App.css";
+import CharacterCell from "./components/CharacterCell";
+import { useState } from "react";
 
 function App() {
+  const [characters, setCharacters] = useState([]);
+  const createCharacter = (character) => {};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="app-board">
+      <h1>Initiative tracker</h1>
+      <input type="button" class="fight" value="Fight!" />
+
+      {characters.map((character) => (
+        <CharacterCell {...character} />
+      ))}
+      <AddCharacter
+        createCharacter={(character) =>
+          setCharacters((state) => [...state, character])
+        }
+      />
     </div>
   );
 }

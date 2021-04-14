@@ -1,38 +1,274 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    position:relative;
+    background-color: black;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1 {
+    color: white;
+    text-align: center;
+    letter-spacing: .3rem;
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+h2 {
+    color: white;
+}
+
+div {
+    color: white;
+}
+
+.paintcircle{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .6;
+}
+
+/* APP MAIN */
+
+.app-board {
+    font-family: 'Pirata One', cursive;
+    background: rgba(0, 0, 0, 0.4);
+    width: 60rem;
+    margin: 5rem auto;
+    border: solid white 3px;
+    overflow: hidden;
   }
+.app-board h1 {
+  margin: 3rem auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .character-cell {
+    font-family: 'Pirata One', cursive;
+    display: flex;
+    font-size: 1.2em;
+    border: solid 2px white;
+    letter-spacing: 2px;
+    background-color: rgba(255, 255, 255, 0.459);
+  }
+
+  .character-cell h2 {
+    margin:1rem 2rem;
+  }
+
+  .initiative-display {
+    font-family: 'Pirata One', cursive;
+    border: none;
+    max-width: 5rem;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-grow: 1;
+    padding: .3rem;
+    border-radius: 13%;
+    justify-content: space-between;
+    align-self: center;
+    text-align: center;
+    text-decoration: underline;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
+  /* ADD CHARACTER FORMS */
+
+  .add-character{
+    display: flex;
+  }
+
+  .character-name-input {
+    font-family: 'Pirata One', cursive;
+    flex-grow: 1;
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    border-width: 0 0 1px 0;
+    margin: 20px 10px 15px 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-style: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 2px;
+    outline: none;
+  }
+
+  input[type=submit] {
+    flex-grow: 1;
+    font-family: 'Pirata One', cursive;
+    display: block;
+    max-height: 3rem;
+    font-size: 1.5rem;
+    margin: 1rem 0 0 4.5rem;; 
+    padding: .5rem;
+    background-color: black;
+    border-radius: 13px;
+    border: solid white 2px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+  }
+
+button, 
+input[type=submit] {
+  outline: none;
+  transition: background-color 0.2s ease,
+              color 0.2s ease;
+}
+
+input[type=submit]:hover {
+  transform: scale(1.1);
+  transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input[type=text]:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .fight {
+    position:absolute;
+    top: 1rem;
+    font-family: 'Pirata One', cursive;
+    display: block;
+    height: 6rem;
+    width: 6rem;
+    font-size: 1.5rem;
+    margin: 1rem 0 0 4.5rem;; 
+    padding: .5rem;
+    background-color: black;
+    border-radius: 100%;
+    border: solid white 2px;
+    color: red;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .fight:hover {
+    transform: rotate(20deg) scale(1.2);
+    
+  }
+
+  .init-input {
+    display: flex;
+    border: solid white 2px;
+    border-radius: 13px;
+    padding: 0rem 2rem 1rem 2rem;
+    align-items: center;
+    width:12rem;
+    flex-direction: column;
+    margin: 1.5rem;
+  }
+
+  .init-input h2, 
+  .type-selector h2 {
+    letter-spacing: .2rem;
+  }
+
+.init-actions {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+  .init-action {
+    font-family: 'Pirata One', cursive;
+    border: none;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #B0AEBA;
+    background-color: #DCDCDC;
+    display: inline-block;
+    padding: 20px 20px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .init-score {
+    font-family: 'Pirata One', cursive;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 3rem;
+    max-width: 5rem;
+    min-height: 4.25rem;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.0);
+    border-style: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    color: #FFF;
+    border: solid white 2px;
+    outline: none;
+  }
+
+.increment {
+  background: #84d97c7a;
+  border: solid white 2px;
+  border-radius: 10%;
+  border-left: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.decrement {
+  background: #ef535079;
+  border: solid white 2px;
+  border-radius: 10%;
+  border-right: none;
+  
 }
+
+.increment:hover {
+  background: #039600;
+}
+
+.decrement:hover {
+  background: #980000;
+}
+
+  .type-selector {
+    flex-grow: 1;
+    border: solid white 2px;
+    border-radius: 13px;
+    color: white;
+    width: 8rem;
+    text-align: center;
+    margin: 1.5rem;
+  }
+
+  .type-selector h2 {
+      font-size: 2rem;
+  }
+
+  .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: .3rem;
+      padding: .5rem;
+      justify-items: center;
+      align-items: center;
+  }
+
+
