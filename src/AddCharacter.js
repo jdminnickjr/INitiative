@@ -1,64 +1,98 @@
 import React, { useState } from "react";
+import InitInput from "./components/InitInput";
 
 const AddCharacter = (props) => {
   const [characterName, setCharacterName] = useState("");
   const [characterInit, setCharacterInit] = useState(0);
-  //   const [characterType, setCharaterType] = useState("");
+  const [characterType, setCharacterType] = useState("pc");
+  const handleUpdateInitiative = (val) => {
+    setCharacterInit(val);
+  };
+
+  const characterInfo = React.useRef(null);
 
   const createCharacter = (character) => {
-    props.createCharacter({ characterName, characterInit });
+    props.createCharacter({
+      characterName,
+      characterInit,
+      active: false,
+      characterType,
+    });
+    characterInfo.current.value = "";
+    setCharacterInit(0);
+    setCharacterType("pc");
   };
 
   return (
     <div class="add-character">
       <span>
         <input
-          class="character-name-input"
+          className="character-name-input"
           type="text"
+          ref={characterInfo}
           placeholder="Character Name"
           onInput={(e) => setCharacterName(e.target.value)}
         />
-        <button
-          class="add-character"
+        <input
+          type="submit"
+          className="add-character"
           value="Add Character"
           onClick={createCharacter}
-        >
-          Add Character{" "}
-        </button>
+        />
       </span>
 
-      <div class="init-input">
-        <h2>Initiative</h2>
-        <div class="init-actions">
-          <button class="init-action decrement"> - </button>
-          <input
-            class="init-score"
-            type="text"
-            placeholder="0"
-            onInput={(e) => setCharacterInit(e.target.value)}
-          />
-
-          <button class="init-action increment"> + </button>
-        </div>
-      </div>
+      <InitInput
+        characterInit={characterInit}
+        handleUpdateInitiative={handleUpdateInitiative}
+      />
       <div class="type-selector">
         <h2>Type</h2>
         <div class="buttons">
-          <label for="PC">
+          <label
+            for="PC"
+            onClick={() => {
+              setCharacterType("pc");
+            }}
+          >
             {" "}
-            <input type="radio" value="PC" id="PC" /> PC{" "}
+            <input name="type" type="radio" value="PC" id="PC" /> PC{" "}
           </label>
-          <label for="NPC">
+          <label
+            for="NPC"
+            onClick={() => {
+              setCharacterType("npc");
+            }}
+          >
             {" "}
-            <input type="radio" value="NPC" id="NPC" /> NPC{" "}
+            <input name="type" type="radio" value="NPC" id="NPC" /> NPC{" "}
           </label>
-          <label for="enemy">
+          <label
+            for="enemy"
+            onClick={() => {
+              setCharacterType("enemy");
+            }}
+          >
             {" "}
-            <input type="radio" value="enemy" id="enemy" /> Enemy{" "}
+            <input
+              name="type"
+              type="radio"
+              value="enemy"
+              id="enemy"
+            /> Enemy{" "}
           </label>
-          <label for="other">
+          <label
+            for="other"
+            onClick={() => {
+              setCharacterType("other");
+            }}
+          >
             {" "}
-            <input type="radio" value="other" id="other" /> Other{" "}
+            <input
+              name="type"
+              type="radio"
+              value="other"
+              id="other"
+            /> Other{" "}
           </label>
         </div>
       </div>

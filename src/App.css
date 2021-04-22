@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 
 *,
 *:before,
@@ -7,236 +7,255 @@
 }
 
 body {
-    position:relative;
-    background-color: black;
-    color: white;
+  position: relative;
+  background-color: black;
+  color: white;
+  background-image: url(/Users/jdminnickjr/init-app/src/paintcircle.svg);
+  background-position-y: -6rem;
+  background-position-x: 4rem;
+  background-repeat: no-repeat;
 }
 
 h1 {
-    color: white;
-    text-align: center;
-    letter-spacing: .3rem;
-    text-transform: capitalize;
-    font-size: 3rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+  font-size: 3rem;
 }
 
 h2 {
-    color: white;
+  color: white;
 }
 
 div {
-    color: white;
+  color: white;
 }
 
-.paintcircle{
+.paintcircle {
   z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 /* APP MAIN */
 
 .app-board {
-    font-family: 'Pirata One', cursive;
-    background: rgba(0, 0, 0, 0.4);
-    width: 60rem;
-    margin: 5rem auto;
-    border: solid white 3px;
-    overflow: hidden;
-  }
+  font-family: "Pirata One", cursive;
+  background: rgba(0, 0, 0, 0.4);
+  width: 60rem;
+  margin: 5rem auto;
+  border: solid white 3px;
+  overflow: hidden;
+}
 .app-board h1 {
   margin: 3rem auto;
 }
 
-  .character-cell {
-    font-family: 'Pirata One', cursive;
-    display: flex;
-    font-size: 1.2em;
-    border: solid 2px white;
-    letter-spacing: 2px;
-    background-color: rgba(255, 255, 255, 0.459);
-  }
+.character-cell {
+  font-family: "Pirata One", cursive;
+  display: flex;
+  font-size: 1.2em;
+  border: solid 2px white;
+  letter-spacing: 2px;
+  background-color: rgba(255, 255, 255, 0.459);
+}
 
-  .character-cell h2 {
-    margin:1rem 2rem;
-  }
-
-  .initiative-display {
-    font-family: 'Pirata One', cursive;
-    border: none;
-    max-width: 5rem;
-    font-size: 2rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    flex-grow: 1;
-    padding: .3rem;
-    border-radius: 13%;
-    justify-content: space-between;
-    align-self: center;
-    text-align: center;
-    text-decoration: underline;
-    margin-left: auto;
-    margin-right: 2rem;
-  }
-
-  /* ADD CHARACTER FORMS */
-
-  .add-character{
-    display: flex;
-  }
-
-  .character-name-input {
-    font-family: 'Pirata One', cursive;
-    flex-grow: 1;
-    height: 3rem;
-    width: 20rem;
-    font-size: 1.5rem;
-    border-width: 0 0 1px 0;
-    margin: 20px 10px 15px 15px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-style: none;
-    text-shadow: none;
-    text-transform: uppercase;
-    color: #FFF;
-    letter-spacing: 2px;
-    outline: none;
-  }
-
-  input[type=submit] {
-    flex-grow: 1;
-    font-family: 'Pirata One', cursive;
-    display: block;
-    max-height: 3rem;
-    font-size: 1.5rem;
-    margin: 1rem 0 0 4.5rem;; 
-    padding: .5rem;
-    background-color: black;
-    border-radius: 13px;
-    border: solid white 2px;
-    color: #fff;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-shadow: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    align-content: center;
-    justify-content: center;
-  }
-
-button, 
-input[type=submit] {
+.remove-player {
+  font-size: 1.15em;
+  border: none;
   outline: none;
-  transition: background-color 0.2s ease,
-              color 0.2s ease;
+  color: #ef5350;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  padding: 0;
+  background: none;
 }
 
-input[type=submit]:hover {
+.remove-player:hover {
+  visibility: visible;
+}
+
+.character-cell h2 {
+  margin: 1rem 2rem;
+  min-width: 38rem;
+}
+
+.initiative-display {
+  font-family: "Pirata One", cursive;
+  border: none;
+  max-width: 5rem;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-grow: 1;
+  padding: 0.3rem;
+  border-radius: 13%;
+  justify-content: space-between;
+  align-self: center;
+  text-align: center;
+  text-decoration: underline;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+/* ADD CHARACTER FORMS */
+
+.add-character {
+  display: flex;
+}
+
+.character-name-input {
+  font-family: "Pirata One", cursive;
+  flex-grow: 1;
+  height: 3rem;
+  width: 20rem;
+  font-size: 1.5rem;
+  border-width: 0 0 1px 0;
+  margin: 20px 10px 15px 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-style: none;
+  text-shadow: none;
+  color: #fff;
+  letter-spacing: 2px;
+  outline: none;
+}
+
+input[type="submit"] {
+  flex-grow: 1;
+  font-family: "Pirata One", cursive;
+  display: block;
+  max-height: 3rem;
+  font-size: 1.5rem;
+  margin: 1rem 0 0 4.5rem;
+  padding: 0.5rem;
+  background-color: black;
+  border-radius: 13px;
+  border: solid white 2px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-content: center;
+  justify-content: center;
+}
+
+button,
+input[type="submit"] {
+  outline: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"]:hover {
   transform: scale(1.1);
-  transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-input[type=text]:focus {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
+input[type="text"]:focus {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-  .fight {
-    position:absolute;
-    top: 1rem;
-    font-family: 'Pirata One', cursive;
-    display: block;
-    height: 6rem;
-    width: 6rem;
-    font-size: 1.5rem;
-    margin: 1rem 0 0 4.5rem;; 
-    padding: .5rem;
-    background-color: black;
-    border-radius: 100%;
-    border: solid white 2px;
-    color: red;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-shadow: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    align-content: center;
-    justify-content: center;
-    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
+.fight {
+  position: absolute;
+  top: 1rem;
+  font-family: "Pirata One", cursive;
+  display: block;
+  height: 6rem;
+  width: 6rem;
+  font-size: 1.5rem;
+  margin: 1rem 0 0 4.5rem;
+  padding: 0.5rem;
+  background-color: black;
+  border-radius: 100%;
+  border: solid white 2px;
+  color: red;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-content: center;
+  justify-content: center;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
-  .fight:hover {
-    transform: rotate(20deg) scale(1.2);
-    
-  }
+.fight:hover {
+  transform: rotate(20deg) scale(1.2);
+}
 
-  .init-input {
-    display: flex;
-    border: solid white 2px;
-    border-radius: 13px;
-    padding: 0rem 2rem 1rem 2rem;
-    align-items: center;
-    width:12rem;
-    flex-direction: column;
-    margin: 1.5rem;
-  }
+.init-input {
+  display: flex;
+  border: solid white 2px;
+  border-radius: 13px;
+  padding: 0rem 2rem 1rem 2rem;
+  align-items: center;
+  width: 12rem;
+  flex-direction: column;
+  margin: 1.5rem;
+  background-color: black;
+}
 
-  .init-input h2, 
-  .type-selector h2 {
-    letter-spacing: .2rem;
-  }
+.init-input h2,
+.type-selector h2 {
+  letter-spacing: 0.2rem;
+  padding: none;
+  margin: 0.1rem;
+}
 
 .init-actions {
   display: flex;
 }
 
-  .init-action {
-    font-family: 'Pirata One', cursive;
-    border: none;
-    font-size: 1.15em;
-    font-weight: bold;
-    color: #B0AEBA;
-    background-color: #DCDCDC;
-    display: inline-block;
-    padding: 20px 20px;
-    cursor: pointer;
-    outline: none;
-  }
+.init-action {
+  font-family: "Pirata One", cursive;
+  border: none;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #b0aeba;
+  background-color: #dcdcdc;
+  display: inline-block;
+  padding: 20px 20px;
+  cursor: pointer;
+  outline: none;
+}
 
-  .init-score {
-    font-family: 'Pirata One', cursive;
-    flex-grow: 1;
-    text-align: center;
-    font-size: 3rem;
-    max-width: 5rem;
-    min-height: 4.25rem;
-    font-size: 1.5rem;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.0);
-    border-style: none;
-    text-shadow: none;
-    text-transform: uppercase;
-    color: #FFF;
-    border: solid white 2px;
-    outline: none;
-  }
+.init-score {
+  font-family: "Pirata One", cursive;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 3rem;
+  max-width: 5rem;
+  min-height: 4.25rem;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  border-style: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: solid white 2px;
+  outline: none;
+}
 
 .increment {
-  background: #84d97c7a;
+  background: #84d97c3d;
   border: solid white 2px;
   border-radius: 10%;
   border-left: none;
 }
 
 .decrement {
-  background: #ef535079;
+  background: #ef535041;
   border: solid white 2px;
   border-radius: 10%;
   border-right: none;
-  
 }
 
 .increment:hover {
@@ -247,28 +266,53 @@ input[type=text]:focus {
   background: #980000;
 }
 
-  .type-selector {
-    flex-grow: 1;
-    border: solid white 2px;
-    border-radius: 13px;
-    color: white;
-    width: 8rem;
-    text-align: center;
-    margin: 1.5rem;
-  }
+.type-selector {
+  flex-grow: 1;
+  border: solid white 2px;
+  border-radius: 13px;
+  color: white;
+  width: 8rem;
+  text-align: center;
+  margin: 1.5rem;
+  background-color: black;
+}
 
-  .type-selector h2 {
-      font-size: 2rem;
-  }
+.type-selector h2 {
+  font-size: 2rem;
+}
 
-  .buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-gap: .3rem;
-      padding: .5rem;
-      justify-items: center;
-      align-items: center;
-  }
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.3rem;
+  padding: 0.5rem;
+  justify-items: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
 
+.character-cell--active h2 {
+  padding: 0.5rem 1.5rem 0.5rem 5rem;
+  transform: scale(1.3);
+  font-size: 2rem;
+  color: red;
+}
 
+.character-cell--active {
+  background-image: url(/Users/jdminnickjr/init-app/src/components/brushline.png);
+  background-repeat: no-repeat;
+  height: 6rem;
+  background-position-y: -2.5rem;
+  background-position-x: -1.8rem;
+  transition: 0.3s ease-in-out;
+}
+
+.type-icon {
+  max-width: 2rem;
+  max-height: 2rem;
+  align-self: center;
+  padding: 0.4rem;
+  border-radius: 13px;
+  margin-left: auto;
+}
