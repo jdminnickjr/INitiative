@@ -24,7 +24,7 @@ const AddCharacter = (props) => {
   };
 
   return (
-    <div class="add-character">
+    <div className="add-character">
       <span>
         <input
           className="character-name-input"
@@ -45,11 +45,10 @@ const AddCharacter = (props) => {
         characterInit={characterInit}
         handleUpdateInitiative={handleUpdateInitiative}
       />
-      <div class="type-selector">
+      <div className="type-selector">
         <h2>Type</h2>
-        <div class="buttons">
+        <div className="buttons">
           <label
-            for="PC"
             onClick={() => {
               setCharacterType("pc");
             }}
@@ -58,7 +57,6 @@ const AddCharacter = (props) => {
             <input name="type" type="radio" value="PC" id="PC" /> PC{" "}
           </label>
           <label
-            for="NPC"
             onClick={() => {
               setCharacterType("npc");
             }}
@@ -67,7 +65,6 @@ const AddCharacter = (props) => {
             <input name="type" type="radio" value="NPC" id="NPC" /> NPC{" "}
           </label>
           <label
-            for="enemy"
             onClick={() => {
               setCharacterType("enemy");
             }}
@@ -81,7 +78,6 @@ const AddCharacter = (props) => {
             /> Enemy{" "}
           </label>
           <label
-            for="other"
             onClick={() => {
               setCharacterType("other");
             }}

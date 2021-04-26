@@ -5,314 +5,619 @@
 *:after {
   box-sizing: border-box;
 }
+@media (min-width: 374px) {
+  body {
+    position: relative;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
 
-body {
-  position: relative;
-  background-color: black;
-  color: white;
-  background-image: url(/Users/jdminnickjr/init-app/src/paintcircle.svg);
-  background-position-y: -6rem;
-  background-position-x: 4rem;
-  background-repeat: no-repeat;
+  h1 {
+    color: white;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    text-transform: capitalize;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  div {
+    color: white;
+  }
+
+  .paintcircle {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+
+  /* APP MAIN */
+
+  .app-board {
+    font-family: "Pirata One", cursive;
+    background: rgba(0, 0, 0, 0.4);
+    width: 18rem;
+    height: fit-content;
+    margin: auto;
+    border: solid white 3px;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+  .app-board h1 {
+    margin: 1.5rem auto;
+  }
+
+  .character-cell {
+    font-family: "Pirata One", cursive;
+    display: flex;
+    font-size: 1.2em;
+    border: solid 2px white;
+    letter-spacing: 2px;
+    background-color: rgba(255, 255, 255, 0.459);
+    height: 4rem;
+  }
+
+  .remove-player {
+    font-size: 1.15em;
+    border: none;
+    outline: none;
+    color: #ef5350;
+    cursor: pointer;
+    margin: 0px 10px 0 0;
+    padding: 0;
+    background: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .character-cell h2 {
+    font-size: 1.3rem;
+    margin: -0.8rem 0 0rem 2rem;
+    max-width: 5rem;
+  }
+
+  .initiative-display {
+    font-family: "Pirata One", cursive;
+    border: none;
+    max-width: 5rem;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-grow: 1;
+    padding: 0.3rem;
+    border-radius: 13%;
+    align-self: center;
+    text-align: center;
+    text-decoration: underline;
+    margin-right: 2rem;
+  }
+
+  /* ADD CHARACTER FORMS */
+
+  .add-character {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .character-name-input {
+    font-family: "Pirata One", cursive;
+    flex-grow: 1;
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    border-width: 0 0 1px 0;
+    margin: 20px 10px 15px 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-style: none;
+    text-shadow: none;
+    color: #fff;
+    letter-spacing: 2px;
+    outline: none;
+  }
+
+  input[type="submit"] {
+    flex-grow: 1;
+    font-family: "Pirata One", cursive;
+    display: block;
+    max-height: 3rem;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 0.5rem;
+    background-color: black;
+    border-radius: 13px;
+    border: solid white 2px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+  }
+
+  button,
+  input[type="submit"] {
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  input[type="submit"]:hover {
+    transform: scale(1.1);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  input[type="text"]:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .fight {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    font-family: "Pirata One", cursive;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+    background-color: black;
+    border-radius: 100%;
+    border: solid white 2px;
+    color: red;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .fight:hover {
+    transform: rotate(20deg) scale(1.2);
+  }
+
+  .init-input {
+    display: flex;
+    border: solid white 2px;
+    border-radius: 13px;
+    padding: 0rem 2rem 1rem 2rem;
+    align-items: center;
+    width: 14rem;
+    flex-direction: column;
+    margin: 1.5rem;
+    background-color: black;
+    margin-left: auto;
+  }
+
+  .init-input h2,
+  .type-selector h2 {
+    letter-spacing: 0.2rem;
+    margin: 0.1rem;
+  }
+
+  .init-actions {
+    display: flex;
+  }
+
+  .init-action {
+    font-family: "Pirata One", cursive;
+    border: none;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #b0aeba;
+    background-color: #dcdcdc;
+    display: inline-block;
+    padding: 20px 20px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .init-score {
+    font-family: "Pirata One", cursive;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 3rem;
+    max-width: 5rem;
+    min-height: 4.25rem;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: solid white 2px;
+    outline: none;
+  }
+
+  .increment {
+    background: #84d97c3d;
+    border: solid white 2px;
+    border-radius: 10%;
+    border-left: none;
+  }
+
+  .decrement {
+    background: #ef535041;
+    border: solid white 2px;
+    border-radius: 10%;
+    border-right: none;
+  }
+
+  .increment:hover {
+    background: #039600;
+  }
+
+  .decrement:hover {
+    background: #980000;
+  }
+
+  .type-selector {
+    flex-grow: 1;
+    border: solid white 2px;
+    border-radius: 13px;
+    color: white;
+    width: 14rem;
+    text-align: center;
+    margin: auto;
+    background-color: black;
+    margin-bottom: 2rem;
+  }
+
+  .type-selector h2 {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    font-size: 1.5rem;
+  }
+
+  .character-cell--active h2 {
+    transform: scale(1.3);
+    font-size: 1.5rem;
+    color: red;
+  }
+
+  .character-cell--active {
+    background-image: url(/Users/jdminnickjr/init-app/src/components/brushline.png);
+    background-repeat: no-repeat;
+    height: 4rem;
+    background-position-y: -2.5rem;
+    background-position-x: -1.8rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  .type-icon {
+    max-width: 0.5rem;
+    max-height: 0.5rem;
+    align-self: center;
+    justify-self: center;
+    padding: 0.6rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
 }
 
-h1 {
-  color: white;
-  text-align: center;
-  letter-spacing: 0.3rem;
-  text-transform: capitalize;
-  font-size: 3rem;
-}
+@media (min-width: 400px) {
+  body {
+    position: relative;
+    background-color: black;
+    color: white;
+    background-image: url(/Users/jdminnickjr/init-app/src/paintcircle.svg);
+    background-position-y: -6rem;
+    background-position-x: 4rem;
+    background-repeat: no-repeat;
+  }
 
-h2 {
-  color: white;
-}
+  .paintcircle {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+  }
 
-div {
-  color: white;
-}
+  h1 {
+    font-size: 3rem;
+  }
 
-.paintcircle {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.6;
-}
+  /* APP MAIN */
 
-/* APP MAIN */
+  .app-board {
+    font-family: "Pirata One", cursive;
+    background: rgba(0, 0, 0, 0.4);
+    width: 60rem;
+    margin: 5rem auto;
+    border: solid white 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  .app-board h1 {
+    margin: 3rem auto;
+  }
 
-.app-board {
-  font-family: "Pirata One", cursive;
-  background: rgba(0, 0, 0, 0.4);
-  width: 60rem;
-  margin: 5rem auto;
-  border: solid white 3px;
-  overflow: hidden;
-}
-.app-board h1 {
-  margin: 3rem auto;
-}
+  .character-cell {
+    font-family: "Pirata One", cursive;
+    display: flex;
+    font-size: 1.2em;
+    border: solid 2px white;
+    letter-spacing: 2px;
+    background-color: rgba(255, 255, 255, 0.459);
+  }
 
-.character-cell {
-  font-family: "Pirata One", cursive;
-  display: flex;
-  font-size: 1.2em;
-  border: solid 2px white;
-  letter-spacing: 2px;
-  background-color: rgba(255, 255, 255, 0.459);
-}
+  .remove-player {
+    z-index: 2;
+    font-size: 1.15em;
+    border: none;
+    outline: none;
+    color: #ef5350;
+    cursor: pointer;
+    margin: 2rem;
+    background: none;
+    justify-content: center;
+    align-items: center;
+  }
 
-.remove-player {
-  font-size: 1.15em;
-  border: none;
-  outline: none;
-  color: #ef5350;
-  cursor: pointer;
-  margin: 0 10px 0 0;
-  padding: 0;
-  background: none;
-}
+  .character-cell h2 {
+    margin: auto;
+    min-width: 38rem;
+    font-size: 2.5rem;
+    display: inline-block;
+  }
 
-.remove-player:hover {
-  visibility: visible;
-}
+  .initiative-display {
+    font-family: "Pirata One", cursive;
+    border: none;
+    max-width: 5rem;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-grow: 1;
+    padding: 0.3rem;
+    border-radius: 13%;
+    justify-content: space-between;
+    align-self: center;
+    text-align: center;
+    text-decoration: underline;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
 
-.character-cell h2 {
-  margin: 1rem 2rem;
-  min-width: 38rem;
-}
+  /* ADD CHARACTER FORMS */
 
-.initiative-display {
-  font-family: "Pirata One", cursive;
-  border: none;
-  max-width: 5rem;
-  font-size: 2rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  flex-grow: 1;
-  padding: 0.3rem;
-  border-radius: 13%;
-  justify-content: space-between;
-  align-self: center;
-  text-align: center;
-  text-decoration: underline;
-  margin-left: auto;
-  margin-right: 2rem;
-}
+  .add-character {
+    display: flex;
+    flex-direction: row;
+  }
 
-/* ADD CHARACTER FORMS */
+  .character-name-input {
+    font-family: "Pirata One", cursive;
+    flex-grow: 1;
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    border-width: 0 0 1px 0;
+    margin: 20px 10px 15px 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-style: none;
+    text-shadow: none;
+    color: #fff;
+    letter-spacing: 2px;
+    outline: none;
+  }
 
-.add-character {
-  display: flex;
-}
+  input[type="submit"] {
+    flex-grow: 1;
+    font-family: "Pirata One", cursive;
+    display: block;
+    max-height: 3rem;
+    font-size: 1.5rem;
+    margin: 1rem 0 0 4.5rem;
+    padding: 0.5rem;
+    background-color: black;
+    border-radius: 13px;
+    border: solid white 2px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+  }
 
-.character-name-input {
-  font-family: "Pirata One", cursive;
-  flex-grow: 1;
-  height: 3rem;
-  width: 20rem;
-  font-size: 1.5rem;
-  border-width: 0 0 1px 0;
-  margin: 20px 10px 15px 15px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-style: none;
-  text-shadow: none;
-  color: #fff;
-  letter-spacing: 2px;
-  outline: none;
-}
+  button,
+  input[type="submit"] {
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
 
-input[type="submit"] {
-  flex-grow: 1;
-  font-family: "Pirata One", cursive;
-  display: block;
-  max-height: 3rem;
-  font-size: 1.5rem;
-  margin: 1rem 0 0 4.5rem;
-  padding: 0.5rem;
-  background-color: black;
-  border-radius: 13px;
-  border: solid white 2px;
-  color: #fff;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-shadow: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  align-content: center;
-  justify-content: center;
-}
+  input[type="submit"]:hover {
+    transform: scale(1.1);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 
-button,
-input[type="submit"] {
-  outline: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
+  input[type="text"]:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 
-input[type="submit"]:hover {
-  transform: scale(1.1);
-  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+  .fight {
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    font-family: "Pirata One", cursive;
+    display: block;
+    height: 6rem;
+    width: 6rem;
+    font-size: 1.5rem;
+    margin: 1rem 0 0 4.5rem;
+    padding: 0.5rem;
+    background-color: black;
+    border-radius: 100%;
+    border: solid white 2px;
+    color: red;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 
-input[type="text"]:focus {
-  background-color: rgba(0, 0, 0, 0.4);
-}
+  .fight:hover {
+    transform: rotate(20deg) scale(1.2);
+  }
 
-.fight {
-  position: absolute;
-  top: 1rem;
-  font-family: "Pirata One", cursive;
-  display: block;
-  height: 6rem;
-  width: 6rem;
-  font-size: 1.5rem;
-  margin: 1rem 0 0 4.5rem;
-  padding: 0.5rem;
-  background-color: black;
-  border-radius: 100%;
-  border: solid white 2px;
-  color: red;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-shadow: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  align-content: center;
-  justify-content: center;
-  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+  .init-input {
+    display: flex;
+    border: solid white 2px;
+    border-radius: 13px;
+    padding: 0rem 2rem 1rem 2rem;
+    align-items: center;
+    width: 12rem;
+    flex-direction: column;
+    margin: 1.5rem;
+    background-color: black;
+  }
 
-.fight:hover {
-  transform: rotate(20deg) scale(1.2);
-}
+  .init-input h2,
+  .type-selector h2 {
+    letter-spacing: 0.2rem;
+    margin: 0.1rem;
+  }
 
-.init-input {
-  display: flex;
-  border: solid white 2px;
-  border-radius: 13px;
-  padding: 0rem 2rem 1rem 2rem;
-  align-items: center;
-  width: 12rem;
-  flex-direction: column;
-  margin: 1.5rem;
-  background-color: black;
-}
+  .init-actions {
+    display: flex;
+  }
 
-.init-input h2,
-.type-selector h2 {
-  letter-spacing: 0.2rem;
-  padding: none;
-  margin: 0.1rem;
-}
+  .init-action {
+    font-family: "Pirata One", cursive;
+    border: none;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #b0aeba;
+    background-color: #dcdcdc;
+    display: inline-block;
+    padding: 20px 20px;
+    cursor: pointer;
+    outline: none;
+  }
 
-.init-actions {
-  display: flex;
-}
+  .init-score {
+    font-family: "Pirata One", cursive;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 3rem;
+    max-width: 5rem;
+    min-height: 4.25rem;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: solid white 2px;
+    outline: none;
+  }
 
-.init-action {
-  font-family: "Pirata One", cursive;
-  border: none;
-  font-size: 1.15em;
-  font-weight: bold;
-  color: #b0aeba;
-  background-color: #dcdcdc;
-  display: inline-block;
-  padding: 20px 20px;
-  cursor: pointer;
-  outline: none;
-}
+  .increment {
+    background: #84d97c3d;
+    border: solid white 2px;
+    border-radius: 10%;
+    border-left: none;
+  }
 
-.init-score {
-  font-family: "Pirata One", cursive;
-  flex-grow: 1;
-  text-align: center;
-  font-size: 3rem;
-  max-width: 5rem;
-  min-height: 4.25rem;
-  font-size: 1.5rem;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0);
-  border-style: none;
-  text-shadow: none;
-  text-transform: uppercase;
-  color: #fff;
-  border: solid white 2px;
-  outline: none;
-}
+  .decrement {
+    background: #ef535041;
+    border: solid white 2px;
+    border-radius: 10%;
+    border-right: none;
+  }
 
-.increment {
-  background: #84d97c3d;
-  border: solid white 2px;
-  border-radius: 10%;
-  border-left: none;
-}
+  .increment:hover {
+    background: #039600;
+  }
 
-.decrement {
-  background: #ef535041;
-  border: solid white 2px;
-  border-radius: 10%;
-  border-right: none;
-}
+  .decrement:hover {
+    background: #980000;
+  }
 
-.increment:hover {
-  background: #039600;
-}
+  .type-selector {
+    flex-grow: 1;
+    border: solid white 2px;
+    border-radius: 13px;
+    color: white;
+    width: 8rem;
+    text-align: center;
+    margin: 1.5rem;
+    background-color: black;
+  }
 
-.decrement:hover {
-  background: #980000;
-}
+  .type-selector h2 {
+    font-size: 2rem;
+  }
 
-.type-selector {
-  flex-grow: 1;
-  border: solid white 2px;
-  border-radius: 13px;
-  color: white;
-  width: 8rem;
-  text-align: center;
-  margin: 1.5rem;
-  background-color: black;
-}
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.3rem;
+    padding: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
 
-.type-selector h2 {
-  font-size: 2rem;
-}
+  .character-cell--active h2 {
+    padding: 0.5rem 1.5rem 0.5rem 5rem;
+    transform: scale(1.3);
+    font-size: 2rem;
+    color: red;
+  }
 
-.buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 0.3rem;
-  padding: 0.5rem;
-  justify-items: center;
-  align-items: center;
-  font-size: 1.5rem;
-}
+  .character-cell--active {
+    background-image: url(/Users/jdminnickjr/init-app/src/components/brushline.png);
+    background-repeat: no-repeat;
+    height: 6rem;
+    background-position-y: -2.5rem;
+    background-position-x: -1.8rem;
+    transition: 0.3s ease-in-out;
+  }
 
-.character-cell--active h2 {
-  padding: 0.5rem 1.5rem 0.5rem 5rem;
-  transform: scale(1.3);
-  font-size: 2rem;
-  color: red;
-}
-
-.character-cell--active {
-  background-image: url(/Users/jdminnickjr/init-app/src/components/brushline.png);
-  background-repeat: no-repeat;
-  height: 6rem;
-  background-position-y: -2.5rem;
-  background-position-x: -1.8rem;
-  transition: 0.3s ease-in-out;
-}
-
-.type-icon {
-  max-width: 2rem;
-  max-height: 2rem;
-  align-self: center;
-  padding: 0.4rem;
-  border-radius: 13px;
-  margin-left: auto;
+  .type-icon {
+    max-width: 2rem;
+    max-height: 2rem;
+    align-self: center;
+    padding: 0.4rem;
+    border-radius: 13px;
+    margin: auto;
+  }
 }

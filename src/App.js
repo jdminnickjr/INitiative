@@ -19,20 +19,17 @@ function App(props) {
   };
 
   const removeCharacter = (id) => {
-    console.log(characters, id);
     setCharacters(
       characters.filter((character) => character.characterName !== id)
     );
-    setCharacters([]);
-    console.log(characters);
   };
 
   return (
-    <div class="app-board">
+    <div className="app-board">
       <h1>Initiative tracker</h1>
       <input
         type="button"
-        class="fight"
+        className="fight"
         value="Fight!"
         onClick={() => {
           setCharacters((unsortedCharacters) => [
