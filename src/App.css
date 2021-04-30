@@ -297,7 +297,7 @@
   }
 
   .character-cell--active {
-    background-image: url(/Users/jdminnickjr/init-app/src/components/brushline.png);
+    background-image: url(./components/brushline.png);
     background-repeat: no-repeat;
     height: 4rem;
     background-position-y: -2.5rem;
