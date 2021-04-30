@@ -1,5 +1,5 @@
 import React from "react";
-import TypeIcon from "./components/TypeIcon.js";
+import TypeIcon from "./TypeIcon.js";
 
 const CharacterCell = (props) => {
   return (
