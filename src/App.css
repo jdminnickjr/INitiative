@@ -22,7 +22,6 @@
     text-transform: capitalize;
     font-size: 2rem;
     padding: 1rem;
-    margin: none;
   }
 
   h2 {
@@ -323,7 +322,7 @@
     position: relative;
     background-color: black;
     color: white;
-    background-image: url(/Users/jdminnickjr/init-app/src/paintcircle.svg);
+    background-image: url(./components/paintcircle.png);
     background-position-y: -6rem;
     background-position-x: 4rem;
     background-repeat: no-repeat;
