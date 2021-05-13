@@ -26,6 +26,16 @@ const CharacterCell = (props) => {
         <h2>{props.characterName}</h2>
       </span>
 
+      <label className="concentration">
+        C
+        <input
+          name="concentration"
+          type="checkbox"
+          value="concentration"
+          id="concenteration"
+        />
+      </label>
+
       <span className="type-icon">
         {" "}
         <TypeIcon type={props.characterType} />
