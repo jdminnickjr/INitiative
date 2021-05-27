@@ -33,12 +33,6 @@ const AddCharacter = (props) => {
           placeholder="Character Name"
           onInput={(e) => setCharacterName(e.target.value)}
         />
-        <input
-          type="submit"
-          className="add-character"
-          value="Add Character"
-          onClick={createCharacter}
-        />
       </span>
 
       <InitInput
@@ -92,6 +86,12 @@ const AddCharacter = (props) => {
           </label>
         </div>
       </div>
+      <input
+        type="submit"
+        className="add-character"
+        value="Add Character"
+        onClick={createCharacter}
+      />
     </div>
   );
 };

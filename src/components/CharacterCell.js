@@ -25,10 +25,11 @@ const CharacterCell = (props) => {
         </button>
         <h2>{props.characterName}</h2>
       </span>
-
+    <div className="cell_info">
       <label className="concentration">
         C
         <input
+          className="concentration_radio"
           name="concentration"
           type="checkbox"
           value="concentration"
@@ -41,6 +42,7 @@ const CharacterCell = (props) => {
         <TypeIcon type={props.characterType} />
       </span>
       <div className="initiative-display">{props.characterInit}</div>
+      </div>
     </span>
   );
 };
