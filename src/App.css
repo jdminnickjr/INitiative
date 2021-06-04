@@ -442,14 +442,14 @@ svg {
   }
   .character-cell {
     min-width: 76vw;
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   .character-cell h2 {
     margin: auto;
-    font-size: 4vw;
     display: inline-block;
     margin-left: 1rem;
+    font-size: 2rem;
   }
 
   .cell_info {
