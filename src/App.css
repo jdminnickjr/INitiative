@@ -12,7 +12,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background: url(./components/dnd_battle_1.png);
+  background: url(./components/svgs/background_IN.png);
+  overflow-x: hidden;
 }
 
 svg {
@@ -28,6 +29,12 @@ svg {
     text-transform: capitalize;
     font-size: 2rem;
     padding: 1rem;
+    padding-bottom: 5rem;
+    background: url(/src/components/init_UNderline3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 5rem;
+    overflow: visible;
   }
 
   h2 {
@@ -44,12 +51,12 @@ svg {
     font-family: "Playfair Display SC", serif;
     background: url(./components/./IN_mobile_background_5.png);
     background-repeat: no-repeat;
-    /* overflow: hidden; */
     background-position-x: center;
     width: 100vw;
     height: 60rem;
     margin: auto;
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .app-board h1 {
@@ -58,7 +65,7 @@ svg {
   }
 
   .fight {
-    margin-left: 8.5rem;
+    margin-left: 3rem;
     margin-bottom: 0.5rem;
     font-family: "Playfair Display SC", serif;
     display: block;
@@ -71,10 +78,11 @@ svg {
     color: #c53131;
     letter-spacing: 2px;
     font-weight: bold;
-    text-shadow: none;
+    -webkit-appearance: none;
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 0.5rem;
   }
 
   .fight:hover {
@@ -90,7 +98,7 @@ svg {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.6);
     margin-left: 8rem;
-    margin-top: -7rem;
+    margin-top: -5.5rem;
     margin-bottom: 1rem;
   }
 
@@ -115,8 +123,21 @@ svg {
     outline: none;
   }
 
+  .round-tracker .decrement {
+    margin-right: -1rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+  }
+
+  .round-tracker .increment {
+    margin-left: -1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+
   .round-score {
     font-family: "Playfair Display SC", serif;
+    z-index: 1;
     flex-grow: 1;
     text-align: center;
     font-size: 3rem;
@@ -165,8 +186,9 @@ svg {
 
   .initiative-display {
     font-family: "Playfair Display SC", serif;
-    border: none;
+    border: solid #c53131 2px;
     max-width: 3rem;
+    min-width: 3rem;
     font-size: 1.6rem;
     color: #fffbfb;
     background-color: rgba(0, 0, 0, 0.6);
@@ -189,21 +211,28 @@ svg {
 
   .concentration_radio {
     height: 1rem;
-    width: 1rem;
     min-width: 1rem;
-    background-color: #fff;
-    border: 1px solid #d8d8d8;
-    margin: 4px;
+    border: solid 2px red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  /* .concentration_radio_clicked {
-    content: "";
-    display: block;
-    height: 13px;
-    width: 13px;
-    margin: 5px auto 0;
-    background: #c53131;
-  } */
+  .checkmark {
+    width: calc(100%-6px);
+    height: calc(100%-6px);
+    background-color: red;
+    display: none;
+  }
+
+  .concentration_radio input {
+    display: none;
+  }
+
+  .concentration_radio:checked + .checkmark {
+    display: inline-block;
+  }
 
   .character-cell--active h2 {
     font-size: 1.5rem;
@@ -279,7 +308,6 @@ svg {
     max-height: 3rem;
     font-size: 1.32rem;
     margin: auto;
-    padding: 0.5rem;
     background-color: rgba(0, 0, 0, 1);
     border-radius: 13px;
     border: solid #c53131 2px;
@@ -292,6 +320,7 @@ svg {
     align-content: center;
     justify-content: center;
     padding: 1rem;
+    -webkit-appearance: none;
   }
 
   button,
@@ -349,6 +378,7 @@ svg {
   .init-score {
     font-family: "Playfair Display SC", serif;
     flex-grow: 1;
+    z-index: 1;
     text-align: center;
     font-size: 3rem;
     max-width: 5rem;
@@ -387,6 +417,18 @@ svg {
     background: #980000;
   }
 
+  .init-input .decrement {
+    margin-right: -1rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+  }
+
+  .init-input .increment {
+    margin-left: -1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+
   .round-tracker {
     text-align: center;
     border: none;
@@ -419,6 +461,31 @@ svg {
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.5rem;
+  }
+
+  .custom-btn {
+    height: 1rem;
+    min-width: 1rem;
+    border: solid 2px red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .checkmark {
+    width: calc(100%-6px);
+    height: calc(100%-6px);
+    background-color: red;
+    display: none;
+  }
+
+  .concentration_radio input {
+    display: none;
+  }
+
+  .custom-btn input:checked ~ .checkmark {
+    display: inline-block;
   }
 }
 
@@ -549,10 +616,6 @@ svg {
 }
 
 @media (min-width: 1100px) {
-  .app-board {
-    /* max-width: 60rem; */
-  }
-
   .add-character {
     max-width: 50rem;
     margin-left: auto;
@@ -564,6 +627,6 @@ svg {
   }
 
   .round-tracker {
-    right: 10rem;
+    right: 12rem;
   }
 }

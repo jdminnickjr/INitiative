@@ -34,7 +34,7 @@ function App(props) {
       <input
         type="button"
         className="fight"
-        value="Fight!"
+        value="Fight"
         onClick={() => {
           setCharacters((unsortedCharacters) => [
             ...unsortedCharacters.sort(

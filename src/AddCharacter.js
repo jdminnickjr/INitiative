@@ -48,7 +48,8 @@ const AddCharacter = (props) => {
             }}
           >
             {" "}
-            <input name="type" type="radio" value="PC" id="PC" /> PC{" "}
+            <input className="custom-btn" name="type" type="radio" value="PC" id="PC" /> PC{" "}
+            <span className="checkmark"></span>
           </label>
           <label
             onClick={() => {
@@ -56,7 +57,8 @@ const AddCharacter = (props) => {
             }}
           >
             {" "}
-            <input name="type" type="radio" value="NPC" id="NPC" /> NPC{" "}
+            <input className="custom-btn" name="type" type="radio" value="NPC" id="NPC" /> NPC{" "}
+            <span className="checkmark"></span>
           </label>
           <label
             onClick={() => {
@@ -65,11 +67,13 @@ const AddCharacter = (props) => {
           >
             {" "}
             <input
+              className="custom-btn"
               name="type"
               type="radio"
               value="enemy"
               id="enemy"
             /> Enemy{" "}
+            <span className="checkmark"></span>
           </label>
           <label
             onClick={() => {
@@ -78,11 +82,13 @@ const AddCharacter = (props) => {
           >
             {" "}
             <input
+              className="custom-btn"
               name="type"
               type="radio"
               value="other"
               id="other"
             /> Other{" "}
+            <span className="checkmark"></span>
           </label>
         </div>
       </div>

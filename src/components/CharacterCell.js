@@ -35,6 +35,7 @@ const CharacterCell = (props) => {
           value="concentration"
           id="concenteration"
         />
+        <span className="checkmark"></span>
       </label>
 
       <span className="type-icon">
