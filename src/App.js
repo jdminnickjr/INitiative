@@ -28,9 +28,6 @@ function App(props) {
   return (
     <div className="app-board">
       <h1>INitiative</h1>
-      <span>
-        <img src="./components/init_UNderline.png" alt=""></img>
-      </span>
       <input
         type="button"
         className="fight"
