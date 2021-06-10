@@ -66,13 +66,9 @@ svg {
     margin-top: 1rem;
   }
 
-  .fight-button {
-    margin-left: 6.5rem;
-  }
-
   .fight {
     position: relative;
-    /* left: 3.5rem; */
+    left: 3.5rem;
     margin-bottom: 0.5rem;
     font-family: "Playfair Display SC", serif;
     display: block;
@@ -607,11 +603,5 @@ svg {
 
   .round-tracker {
     right: 12rem;
-  }
-}
-
-@supports (-webkit-touch-callout: none) {
-  .fight {
-    margin-left: 0rem;
   }
 }
