@@ -28,19 +28,21 @@ function App(props) {
   return (
     <div className="app-board">
       <h1>INitiative</h1>
-      <input
-        type="button"
-        className="fight"
-        value="Fight"
-        onClick={() => {
-          setCharacters((unsortedCharacters) => [
-            ...unsortedCharacters.sort(
-              (characterA, characterB) =>
-                characterB.characterInit - characterA.characterInit
-            ),
-          ]);
-        }}
-      />
+      <div className="fight-button">
+        <input
+          type="button"
+          className="fight"
+          value="Fight"
+          onClick={() => {
+            setCharacters((unsortedCharacters) => [
+              ...unsortedCharacters.sort(
+                (characterA, characterB) =>
+                  characterB.characterInit - characterA.characterInit
+              ),
+            ]);
+          }}
+        />
+      </div>
 
       <div className="round-tracker">
         <h2>Round</h2>

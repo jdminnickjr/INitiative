@@ -58,7 +58,7 @@ svg {
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding: 0rem 3rem;
+    /* padding: 0rem 3rem; */
   }
 
   .app-board h1 {
@@ -66,9 +66,13 @@ svg {
     margin-top: 1rem;
   }
 
+  .fight-button {
+    margin-left: 6.5rem;
+  }
+
   .fight {
     position: relative;
-    left: 12vw;
+    /* left: 3.5rem; */
     margin-bottom: 0.5rem;
     font-family: "Playfair Display SC", serif;
     display: block;
@@ -489,10 +493,6 @@ svg {
   .character-cell {
     min-width: 76vw;
     font-size: 1.2rem;
-  }
-
-  .fight {
-    left: 2rem;
   }
 
   .character-cell h2 {
