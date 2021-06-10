@@ -465,31 +465,6 @@ svg {
     justify-content: space-between;
     font-size: 1.5rem;
   }
-
-  .custom-btn {
-    height: 1rem;
-    min-width: 1rem;
-    border: solid 2px red;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .checkmark {
-    width: calc(100%-6px);
-    height: calc(100%-6px);
-    background-color: red;
-    display: none;
-  }
-
-  .concentration_radio input {
-    display: none;
-  }
-
-  .custom-btn input:checked ~ .checkmark {
-    display: inline-block;
-  }
 }
 
 @media (min-width: 700px) {
@@ -630,11 +605,13 @@ svg {
     margin-right: auto;
   }
 
-  .fight {
-    margin-left: 16rem;
-  }
-
   .round-tracker {
     right: 12rem;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .fight {
+    margin-left: 0rem;
   }
 }
