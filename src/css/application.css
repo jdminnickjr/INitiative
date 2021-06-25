@@ -7,7 +7,7 @@
 
 body {
   position: relative;
-  background-color: black;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -82,7 +82,7 @@ body {
 
 .fight:hover {
   transform: rotate(20deg) scale(1.2);
-  background-color: black;
+  background-color: #000;
 }
 
 .round-tracker {
@@ -192,7 +192,7 @@ svg {
   font-size: 1.15em;
   border: none;
   outline: none;
-  color: red;
+  color: #c53131;
   cursor: pointer;
   background: none;
 }
@@ -223,7 +223,7 @@ svg {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  color: black;
+  color: #000;
   margin-left: auto;
   text-align: center;
 }
@@ -231,26 +231,10 @@ svg {
 .concentration_radio {
   height: 1rem;
   min-width: 1rem;
-  border: solid 2px red;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.checkmark {
-  width: calc(100%-6px);
-  height: calc(100%-6px);
-  background-color: red;
-  display: none;
-}
-
-.concentration_radio input {
-  display: none;
-}
-
-.concentration_radio:checked + .checkmark {
-  display: inline-block;
 }
 
 .character-cell--active h2 {
@@ -382,8 +366,7 @@ input[type=text]:focus {
   border: none;
   font-size: 1.15em;
   font-weight: bold;
-  color: #b0aeba;
-  background-color: #dcdcdc;
+  color: #fffbfb;
   display: inline-block;
   padding: 20px 20px;
   cursor: pointer;
@@ -401,23 +384,18 @@ input[type=text]:focus {
   font-size: 1.5rem;
   padding: 10px;
   border-radius: 5px;
-  background-color: black;
+  background-color: #000;
   border-style: none;
   text-shadow: none;
   text-transform: uppercase;
-  color: #fff;
+  color: #fffbfb;
   border: solid #c53131 2px;
   outline: none;
+  -moz-appearance: textfield;
 }
-
-.init-score::-webkit-outer-spin-button,
-.init-score::-webkit-inner-spin-button {
+.init-score::-webkit-outer-spin-button, .init-score::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.init-score[type=number] {
-  -moz-appearance: textfield;
 }
 
 .increment {
@@ -425,6 +403,12 @@ input[type=text]:focus {
   border: solid #c53131 2px;
   border-radius: 10%;
   border-left: none;
+  margin-left: -1rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+.increment:hover {
+  background: #039600;
 }
 
 .decrement {
@@ -432,26 +416,12 @@ input[type=text]:focus {
   border: solid #c53131 2px;
   border-radius: 10%;
   border-right: none;
-}
-
-.increment:hover {
-  background: #039600;
-}
-
-.decrement:hover {
-  background: #980000;
-}
-
-.init-input .decrement {
   margin-right: -1rem;
   padding-right: 2rem;
   padding-left: 1rem;
 }
-
-.init-input .increment {
-  margin-left: -1rem;
-  padding-left: 2rem;
-  padding-right: 1rem;
+.decrement:hover {
+  background: #980000;
 }
 
 .type-selector {

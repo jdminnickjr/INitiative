@@ -18,10 +18,10 @@
   margin-top: 2rem;
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: $color-background-input;
   border-style: none;
   text-shadow: none;
-  color: #fffbfb;
+  color: $color-text;
   letter-spacing: 2px;
   outline: none;
 }
@@ -35,8 +35,8 @@ input[type="submit"] {
   margin: auto;
   background-color: rgba(0, 0, 0, 1);
   border-radius: 13px;
-  border: solid #c53131 2px;
-  color: #fffbfb;
+  border: $border-main;
+  color: $color-text;
   letter-spacing: 2px;
   font-weight: bold;
   text-shadow: none;
@@ -60,5 +60,5 @@ input[type="submit"]:hover {
 }
 
 input[type="text"]:focus {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: $color-background-input-active;
 }

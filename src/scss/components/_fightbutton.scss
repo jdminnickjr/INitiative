@@ -6,10 +6,10 @@
   height: 6rem;
   width: 6rem;
   font-size: 1.3rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $color-background-type;
   border-radius: 100%;
-  border: solid #c53131 2px;
-  color: #c53131;
+  border: $border-main;
+  color: $color-main;
   letter-spacing: 2px;
   font-weight: bold;
   -webkit-appearance: none;
@@ -21,5 +21,5 @@
 
 .fight:hover {
   transform: rotate(20deg) scale(1.2);
-  background-color: black;
+  background-color: $color-background;
 }

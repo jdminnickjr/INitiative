@@ -1,0 +1,22 @@
+//Colors
+
+$color-main: #c53131;
+$color-text: #fffbfb;
+
+$color-background: #000;
+$color-background-cell: rgba(255, 255, 255, 0.3);
+$color-background-input: rgba(255, 255, 255, 0.4);
+$color-background-input-active: rgba(0, 0, 0, 0.4);
+$color-background-type: rgba(0, 0, 0, 0.6);
+
+$color-glow-start: rgba(31, 211, 8, 0.5);
+$color-glow-end: rgba(31, 211, 8, 0.8);
+
+$color-increment: #84d97c3d;
+$color-increment-hover: #039600;
+$color-decrement: #ef535041;
+$color-decrement-hover: #980000;
+
+//Border
+
+$border-main: solid $color-main 2px;

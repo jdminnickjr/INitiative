@@ -1,13 +1,13 @@
 .init-input {
   display: flex;
-  border: solid #c53131 2px;
+  border: $border-main;
   border-radius: 13px;
   padding: 0rem 2rem 1rem 2rem;
   align-items: center;
   width: 14rem;
   flex-direction: column;
   margin: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $color-background-type;
   margin-left: auto;
   margin-right: auto;
 }
@@ -27,8 +27,7 @@
   border: none;
   font-size: 1.15em;
   font-weight: bold;
-  color: #b0aeba;
-  background-color: #dcdcdc;
+  color: $color-text;
   display: inline-block;
   padding: 20px 20px;
   cursor: pointer;
@@ -46,55 +45,43 @@
   font-size: 1.5rem;
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: $color-background;
   border-style: none;
   text-shadow: none;
   text-transform: uppercase;
-  color: #fff;
-  border: solid #c53131 2px;
+  color: $color-text;
+  border: $border-main;
   outline: none;
-}
-
-.init-score::-webkit-outer-spin-button,
-.init-score::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.init-score[type="number"] {
   -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 .increment {
-  background: #84d97c3d;
-  border: solid #c53131 2px;
+  background: $color-increment;
+  border: $border-main;
   border-radius: 10%;
   border-left: none;
-}
-
-.decrement {
-  background: #ef535041;
-  border: solid #c53131 2px;
-  border-radius: 10%;
-  border-right: none;
-}
-
-.increment:hover {
-  background: #039600;
-}
-
-.decrement:hover {
-  background: #980000;
-}
-
-.init-input .decrement {
-  margin-right: -1rem;
-  padding-right: 2rem;
-  padding-left: 1rem;
-}
-
-.init-input .increment {
   margin-left: -1rem;
   padding-left: 2rem;
   padding-right: 1rem;
+  &:hover {
+    background: $color-increment-hover;
+  }
+}
+
+.decrement {
+  background: $color-decrement;
+  border: $border-main;
+  border-radius: 10%;
+  border-right: none;
+  margin-right: -1rem;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  &:hover {
+    background: $color-decrement-hover;
+  }
 }

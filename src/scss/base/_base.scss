@@ -6,7 +6,7 @@
 
 body {
   position: relative;
-  background-color: black;
+  background-color: $color-background;
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -18,7 +18,7 @@ body {
 
 @media (min-width: 290px) {
   h1 {
-    color: #fffbfb;
+    color: $color-text;
     text-align: center;
     letter-spacing: 0.3rem;
     text-transform: capitalize;
@@ -33,10 +33,10 @@ body {
   }
 
   h2 {
-    color: #fffbfb;
+    color: $color-text;
   }
 
   div {
-    color: #fffbfb;
+    color: $color-text;
   }
 }

@@ -1,12 +1,12 @@
 .type-selector {
   flex-grow: 1;
-  border: solid #c53131 2px;
+  border: $border-main;
   border-radius: 13px;
-  color: #fffbfb;
+  color: $color-text;
   width: 14rem;
   text-align: center;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $color-background-type;
   margin-bottom: 2rem;
 }
 
