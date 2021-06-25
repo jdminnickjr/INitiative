@@ -116,7 +116,7 @@ const AddCharacter = (props) => {
       </div>
       <input
         type="submit"
-        className="add-character"
+        className="add-character-button"
         value="Add Character"
         onClick={() => handleValidation()}
       />

@@ -1,5 +1,7 @@
 .round-tracker {
   position: absolute;
+  left: 10rem;
+  top: -0.5rem;
   display: flex;
   border: $border-main;
   border-radius: 13px;
@@ -9,11 +11,20 @@
   text-align: center;
   border: none;
   background: rgba(0, 0, 0, 0);
-}
-
-.round-tracker h2 {
-  letter-spacing: 0.2rem;
-  margin: 0.5rem;
+  h2 {
+    letter-spacing: 0.2rem;
+    margin: 0.5rem;
+  }
+  .decrement {
+    margin-right: -1rem;
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+  }
+  .increment {
+    margin-left: -1rem;
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 .round-actions {
@@ -25,51 +36,33 @@
   border: none;
   font-size: 1.15em;
   font-weight: bold;
-  color: #b0aeba;
-  background-color: #dcdcdc;
+  color: $color-text;
   display: inline-block;
   cursor: pointer;
   outline: none;
 }
 
-.round-tracker .decrement {
-  margin-right: -1rem;
-  padding-right: 2rem;
-  padding-left: 1rem;
-}
-
-.round-tracker .increment {
-  margin-left: -1rem;
-  padding-left: 2rem;
-  padding-right: 1rem;
-}
-
 .round-score {
   font-family: "Playfair Display SC", serif;
   z-index: 1;
-  flex-grow: 1;
   text-align: center;
   font-size: 3rem;
-  max-width: 5rem;
+  max-width: 4rem;
   max-height: 3.25rem;
   font-size: 1.5rem;
   padding: 1rem;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: $color-background;
   border-style: none;
   text-shadow: none;
   text-transform: uppercase;
-  color: #fff;
+  color: $color-text;
   border: $border-main;
   outline: none;
-}
-
-.round-score::-webkit-outer-spin-button,
-.round-score::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.round-score[type="number"] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
   -moz-appearance: textfield;
 }

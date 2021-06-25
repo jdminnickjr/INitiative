@@ -4,14 +4,14 @@
   background: url(../components/images/IN_mobile_background_5.png);
   background-repeat: no-repeat;
   background-position-x: center;
-  width: 90vw;
+  background-size: contain;
+  width: 60vw;
   height: 60rem;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.app-board h1 {
-  margin: auto;
-  margin-top: 1rem;
+  h1 {
+    margin: auto;
+    margin-top: 1rem;
+  }
 }

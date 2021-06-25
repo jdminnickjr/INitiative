@@ -24,16 +24,18 @@
   color: $color-text;
   letter-spacing: 2px;
   outline: none;
+  &:focus {
+    background-color: $color-background-input-active;
+  }
 }
 
-input[type="submit"] {
-  flex-grow: 1;
+.add-character-button {
   font-family: "Playfair Display SC", serif;
   display: block;
   max-height: 3rem;
   font-size: 1.32rem;
   margin: auto;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: $color-background;
   border-radius: 13px;
   border: $border-main;
   color: $color-text;
@@ -42,23 +44,10 @@ input[type="submit"] {
   text-shadow: none;
   text-transform: uppercase;
   cursor: pointer;
-  align-content: center;
-  justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
   -webkit-appearance: none;
-}
-
-button,
-input[type="submit"] {
-  outline: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-input[type="submit"]:hover {
-  transform: scale(1.1);
-  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-input[type="text"]:focus {
-  background-color: $color-background-input-active;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 }

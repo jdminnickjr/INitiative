@@ -8,15 +8,13 @@
   margin: auto;
   background-color: $color-background-type;
   margin-bottom: 2rem;
-}
-
-.type-selector h2 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.type-selector label {
-  font-size: 1rem;
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  label {
+    font-size: 1rem;
+  }
 }
 
 .buttons {

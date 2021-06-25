@@ -1,12 +1,21 @@
 .character-cell {
   font-family: "Playfair Display SC", serif;
   display: flex;
-  border: solid 2px $color-main;
+  border: $border-main;
   letter-spacing: 2px;
   background-color: $color-background-cell;
   height: 4rem;
-  max-width: 20rem;
+  max-width: 18rem;
   margin: auto;
+  h2 {
+    font-size: 1.5rem;
+    margin: -0.8rem 0 0rem 2rem;
+    max-width: 5rem;
+  }
+  .cell_info {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .remove-player {
@@ -17,12 +26,6 @@
   color: $color-main;
   cursor: pointer;
   background: none;
-}
-
-.character-cell h2 {
-  font-size: 1.5rem;
-  margin: -0.8rem 0 0rem 2rem;
-  max-width: 5rem;
 }
 
 .initiative-display {
@@ -53,14 +56,6 @@
 .concentration_radio {
   height: 1rem;
   min-width: 1rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.character-cell--active h2 {
-  font-size: 1.5rem;
 }
 
 .character-cell--active {
@@ -72,28 +67,10 @@
 @keyframes glow {
   0% {
     border-color: $color-main;
-    box-shadow: 0 0 1px $color-glow-start, inset 0 0 10px $color-glow-start,
-      0 2px 0 $color-background;
+    box-shadow: 0 0 1px $color-glow-start, inset 0 0 10px $color-glow-start;
   }
   100% {
     border-color: $color-main;
-    box-shadow: 0 0 1px $color-glow-end, inset 0 0 30px $color-glow-end,
-      0 2px 0 $color-background;
+    box-shadow: 0 0 1px $color-glow-end, inset 0 0 30px $color-glow-end;
   }
-}
-
-.type-icon {
-  max-width: 0.3rem;
-  max-height: 0.3rem;
-  align-self: center;
-  justify-self: center;
-  padding: 0.6rem;
-  margin: 2rem;
-  margin-bottom: 3rem;
-  margin-left: auto;
-}
-
-.cell_info {
-  display: flex;
-  margin-left: auto;
 }
