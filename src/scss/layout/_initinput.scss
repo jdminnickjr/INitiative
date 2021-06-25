@@ -1,0 +1,100 @@
+.init-input {
+  display: flex;
+  border: solid #c53131 2px;
+  border-radius: 13px;
+  padding: 0rem 2rem 1rem 2rem;
+  align-items: center;
+  width: 14rem;
+  flex-direction: column;
+  margin: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.init-input h2 {
+  letter-spacing: 0.2rem;
+  margin: 0.1rem;
+}
+
+.init-actions {
+  display: flex;
+  padding: 1rem;
+}
+
+.init-action {
+  font-family: "Playfair Display SC", serif;
+  border: none;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #b0aeba;
+  background-color: #dcdcdc;
+  display: inline-block;
+  padding: 20px 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.init-score {
+  font-family: "Playfair Display SC", serif;
+  flex-grow: 1;
+  z-index: 1;
+  text-align: center;
+  font-size: 3rem;
+  max-width: 5rem;
+  min-height: 4.25rem;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 1);
+  border-style: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: solid #c53131 2px;
+  outline: none;
+}
+
+.init-score::-webkit-outer-spin-button,
+.init-score::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.init-score[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.increment {
+  background: #84d97c3d;
+  border: solid #c53131 2px;
+  border-radius: 10%;
+  border-left: none;
+}
+
+.decrement {
+  background: #ef535041;
+  border: solid #c53131 2px;
+  border-radius: 10%;
+  border-right: none;
+}
+
+.increment:hover {
+  background: #039600;
+}
+
+.decrement:hover {
+  background: #980000;
+}
+
+.init-input .decrement {
+  margin-right: -1rem;
+  padding-right: 2rem;
+  padding-left: 1rem;
+}
+
+.init-input .increment {
+  margin-left: -1rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}

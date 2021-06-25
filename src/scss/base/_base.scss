@@ -1,0 +1,42 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background: url(../components/images/background_IN.png);
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+@media (min-width: 290px) {
+  h1 {
+    color: #fffbfb;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    text-transform: capitalize;
+    font-size: 2rem;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    background: url(../components/images/init_Underline3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 5rem;
+    overflow: visible;
+  }
+
+  h2 {
+    color: #fffbfb;
+  }
+
+  div {
+    color: #fffbfb;
+  }
+}

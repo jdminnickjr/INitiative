@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import InitInput from "./components/InitInput";
+import InitInput from "./InitInput.js";
 
 const AddCharacter = (props) => {
   const [characterName, setCharacterName] = useState("");
@@ -23,10 +23,20 @@ const AddCharacter = (props) => {
     setCharacterType("pc");
   };
 
+  const handleValidation = () => {
+    if (characterName.value === "") {
+      console.log("error")
+      window.alert("Please add character name");
+    } else if ((isNaN(characterInit))) {
+      window.alert('Please include your initiative roll')
+    } else {createCharacter()}
+  };
+
   return (
     <div className="add-character">
       <span>
         <input
+        required
           className="character-name-input"
           type="text"
           ref={characterInfo}
@@ -48,8 +58,12 @@ const AddCharacter = (props) => {
             }}
           >
             {" "}
-            <input className="custom-btn" name="type" type="radio" value="PC" id="PC" /> PC{" "}
-            <span className="checkmark"></span>
+            <input name="type" 
+            type="radio"
+            value="PC" 
+            id="PC"
+             
+            /> PC
           </label>
           <label
             onClick={() => {
@@ -57,7 +71,13 @@ const AddCharacter = (props) => {
             }}
           >
             {" "}
-            <input className="custom-btn" name="type" type="radio" value="NPC" id="NPC" /> NPC{" "}
+            <input className="custom-btn" 
+            name="type" 
+            type="radio" 
+            value="NPC" 
+            id="NPC"
+             /> 
+            NPC{" "}
             <span className="checkmark"></span>
           </label>
           <label
@@ -72,6 +92,7 @@ const AddCharacter = (props) => {
               type="radio"
               value="enemy"
               id="enemy"
+              
             /> Enemy{" "}
             <span className="checkmark"></span>
           </label>
@@ -87,6 +108,7 @@ const AddCharacter = (props) => {
               type="radio"
               value="other"
               id="other"
+              
             /> Other{" "}
             <span className="checkmark"></span>
           </label>
@@ -96,7 +118,7 @@ const AddCharacter = (props) => {
         type="submit"
         className="add-character"
         value="Add Character"
-        onClick={createCharacter}
+        onClick={() => handleValidation()}
       />
     </div>
   );

@@ -1,6 +1,6 @@
 import AddCharacter from "./AddCharacter";
-import "./App.css";
-import CharacterCell from "./components/CharacterCell";
+import "./css/application.css";
+import CharacterCell from "./CharacterCell";
 import { useState } from "react";
 
 function App(props) {
@@ -25,9 +25,12 @@ function App(props) {
     );
   };
 
+  const roundCheck = roundNumber === 0 ? 0 : 1;
+
   return (
     <div className="app-board">
       <h1>INitiative</h1>
+      <div className="top">
       <input
         type="button"
         className="fight"
@@ -47,12 +50,13 @@ function App(props) {
         <div className="round-actions">
           <button
             className="round-action decrement"
-            onClick={() => handleUpdateRound(roundNumber - 1)}
+            onClick={() => handleUpdateRound(roundNumber - roundCheck)}
           >
             -
           </button>
           <input
-            type="text"
+            type="number"
+            min="0"
             className="round-score"
             placeholder="0"
             onClick={(e) => handleUpdateRound(e.target.value)}
@@ -65,6 +69,7 @@ function App(props) {
           >
             +
           </button>
+          </div>
         </div>
       </div>
 

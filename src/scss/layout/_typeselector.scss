@@ -1,0 +1,27 @@
+.type-selector {
+  flex-grow: 1;
+  border: solid #c53131 2px;
+  border-radius: 13px;
+  color: #fffbfb;
+  width: 14rem;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+}
+
+.type-selector h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.type-selector label {
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
