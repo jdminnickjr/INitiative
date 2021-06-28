@@ -4,7 +4,7 @@
   letter-spacing: 2px;
   background-color: $color-background-cell;
   height: 4rem;
-  max-width: 18rem;
+  max-width: 57vw;
   margin: auto;
   h2 {
     @include text(1.5rem);
@@ -14,6 +14,22 @@
   .cell_info {
     display: flex;
     margin-left: auto;
+    padding: 0.5rem;
+  }
+  @media #{$break-med} {
+    min-width: 76vw;
+    font-size: 1.2rem;
+    h2 {
+      margin: auto;
+      display: inline-block;
+      margin-left: 1rem;
+      font-size: 2rem;
+    }
+    .cell_info {
+      display: flex;
+      margin-left: auto;
+      min-width: 10vw;
+    }
   }
 }
 
@@ -37,6 +53,12 @@
   text-align: center;
   margin-left: auto;
   margin-right: 1rem;
+  @media #{$break-med} {
+    min-width: 5rem;
+    font-size: 2rem;
+    color: white;
+    justify-content: space-between;
+  }
 }
 
 .concentration {

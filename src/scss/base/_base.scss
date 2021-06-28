@@ -27,6 +27,9 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: 5rem;
+  @media #{$break-med} {
+    font-size: 3rem;
+  }
 }
 
 h2 {

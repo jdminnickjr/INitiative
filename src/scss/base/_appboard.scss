@@ -13,4 +13,14 @@
     margin: auto;
     margin-top: 1rem;
   }
+  @media #{$break-med} {
+    min-width: fit-content;
+    min-height: 60rem;
+    background-image: url(../components/images/INit_background_full.png);
+    background-repeat: no-repeat;
+    background-size: 80vw 120vh;
+    h1 {
+      margin-top: 2rem;
+    }
+  }
 }

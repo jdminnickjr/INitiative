@@ -14,6 +14,14 @@
   label {
     font-size: 1rem;
   }
+  @media #{$break-med} {
+    width: 12rem;
+    text-align: center;
+    margin: 0rem;
+    h2 {
+      font-size: 2rem;
+    }
+  }
 }
 
 .buttons {
@@ -21,4 +29,14 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 1.5rem;
+  @media #{$break-med} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.3rem;
+    padding: 0.5rem;
+    justify-items: left;
+    align-items: center;
+    font-size: 1.5rem;
+  }
 }

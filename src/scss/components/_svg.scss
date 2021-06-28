@@ -7,4 +7,9 @@
   margin: 2rem;
   margin-bottom: 3rem;
   margin-left: auto;
+  @media #{$break-med} {
+    max-width: 2rem;
+    max-height: 2rem;
+    padding: 2rem;
+  }
 }

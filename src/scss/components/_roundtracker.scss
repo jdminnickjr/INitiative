@@ -25,6 +25,10 @@
     padding-left: 1.5rem;
     padding-right: 0.5rem;
   }
+  @media #{$break-med} {
+    position: absolute;
+    left: 15rem;
+  }
 }
 
 .round-actions {
