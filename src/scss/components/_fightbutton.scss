@@ -1,17 +1,14 @@
 .fight {
+  @include text($fontsize-main, bold, $color-main);
   position: absolute;
-  left: 1.5rem;
-  font-family: "Playfair Display SC", serif;
+  left: -3rem;
   display: block;
   height: 6rem;
   width: 6rem;
-  font-size: 1.3rem;
   background-color: $color-background-type;
   border-radius: 100%;
   border: $border-main;
-  color: $color-main;
   letter-spacing: 2px;
-  font-weight: bold;
   -webkit-appearance: none;
   text-transform: uppercase;
   cursor: pointer;

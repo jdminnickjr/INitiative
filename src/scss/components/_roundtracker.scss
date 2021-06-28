@@ -1,10 +1,10 @@
 .round-tracker {
   position: absolute;
-  left: 10rem;
+  left: 5.5rem;
   top: -0.5rem;
   display: flex;
   border: $border-main;
-  border-radius: 13px;
+  border-radius: $border-radius;
   align-items: center;
   flex-direction: column;
   background-color: $color-background-type;
@@ -32,18 +32,16 @@
 }
 
 .round-action {
-  font-family: "Playfair Display SC", serif;
-  border: none;
+  font-family: $fontfamily-playfair;
   font-size: 1.15em;
   font-weight: bold;
   color: $color-text;
   display: inline-block;
   cursor: pointer;
-  outline: none;
 }
 
 .round-score {
-  font-family: "Playfair Display SC", serif;
+  font-family: $fontfamily-playfair;
   z-index: 1;
   text-align: center;
   font-size: 3rem;
@@ -53,12 +51,9 @@
   padding: 1rem;
   border-radius: 5px;
   background-color: $color-background;
-  border-style: none;
   text-shadow: none;
-  text-transform: uppercase;
   color: $color-text;
   border: $border-main;
-  outline: none;
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;

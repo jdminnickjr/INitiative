@@ -1,15 +1,14 @@
 .init-input {
+  @include center();
   display: flex;
   border: $border-main;
-  border-radius: 13px;
+  border-radius: $border-radius;
   padding: 0rem 2rem 1rem 2rem;
   align-items: center;
   width: 14rem;
   flex-direction: column;
   margin: 1.5rem;
   background-color: $color-background-type;
-  margin-left: auto;
-  margin-right: auto;
   h2 {
     letter-spacing: 0.2rem;
     margin: 0.1rem;
@@ -22,35 +21,26 @@
 }
 
 .init-action {
-  font-family: "Playfair Display SC", serif;
+  @include text(1.15rem, bold, $color-text);
+  font-family: $fontfamily-playfair;
   border: none;
   font-size: 1.15em;
-  font-weight: bold;
-  color: $color-text;
   display: inline-block;
-  padding: 20px 20px;
+  padding: 20px;
   cursor: pointer;
-  outline: none;
 }
 
 .init-score {
-  font-family: "Playfair Display SC", serif;
-  flex-grow: 1;
+  @include text(1.5rem, bold, $color-text);
   z-index: 1;
   text-align: center;
-  font-size: 3rem;
   max-width: 5rem;
   min-height: 4.25rem;
-  font-size: 1.5rem;
   padding: 10px;
   border-radius: 5px;
   background-color: $color-background;
   border-style: none;
-  text-shadow: none;
-  text-transform: uppercase;
-  color: $color-text;
   border: $border-main;
-  outline: none;
   -moz-appearance: textfield;
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {

@@ -1,7 +1,6 @@
 .type-selector {
-  flex-grow: 1;
   border: $border-main;
-  border-radius: 13px;
+  border-radius: $border-radius;
   color: $color-text;
   width: 14rem;
   text-align: center;

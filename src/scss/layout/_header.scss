@@ -1,6 +1,7 @@
 .top {
+  @include center();
   position: relative;
-  display: inline-block;
+  display: flex;
   padding-left: 4rem;
   padding-right: 4rem;
   margin-bottom: 1rem;

@@ -1,48 +1,38 @@
 /* ADD CHARACTER FORMS */
 
 .add-character {
+  @include center();
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
   justify-items: center;
   align-items: center;
 }
 
 .character-name-input {
-  font-family: "Playfair Display SC", serif;
-  flex-grow: 1;
+  @include text($fontsize-main, bold, $color-text);
+  font-family: $fontfamily-playfair;
   height: 3rem;
   width: 15rem;
-  font-size: 1.3rem;
   margin-top: 2rem;
   padding: 10px;
   border-radius: 5px;
   background-color: $color-background-input;
   border-style: none;
-  text-shadow: none;
-  color: $color-text;
   letter-spacing: 2px;
-  outline: none;
   &:focus {
     background-color: $color-background-input-active;
   }
 }
 
 .add-character-button {
-  font-family: "Playfair Display SC", serif;
+  @include text($fontsize-main, bold, $color-text);
   display: block;
   max-height: 3rem;
-  font-size: 1.32rem;
   margin: auto;
   background-color: $color-background;
-  border-radius: 13px;
   border: $border-main;
-  color: $color-text;
+  border-radius: $border-radius;
   letter-spacing: 2px;
-  font-weight: bold;
-  text-shadow: none;
-  text-transform: uppercase;
   cursor: pointer;
   padding: 0.5rem;
   -webkit-appearance: none;

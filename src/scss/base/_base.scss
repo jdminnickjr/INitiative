@@ -14,29 +14,25 @@ body {
   overflow-x: hidden;
   background-repeat: no-repeat;
   background-position: fixed;
+  font-family: $fontfamily-playfair;
 }
 
-@media (min-width: 290px) {
-  h1 {
-    color: $color-text;
-    text-align: center;
-    letter-spacing: 0.3rem;
-    text-transform: capitalize;
-    font-size: 2rem;
-    padding: 1rem;
-    padding-bottom: 5rem;
-    background: url(../components/images/init_Underline3.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 5rem;
-    overflow: visible;
-  }
+h1 {
+  @include text(2rem, bold, $color-text);
+  letter-spacing: 0.3rem;
+  font-size: 2rem;
+  padding: 1rem;
+  padding-bottom: 5rem;
+  background: url(../components/images/init_Underline3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 5rem;
+}
 
-  h2 {
-    color: $color-text;
-  }
+h2 {
+  color: $color-text;
+}
 
-  div {
-    color: $color-text;
-  }
+div {
+  color: $color-text;
 }

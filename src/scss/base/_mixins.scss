@@ -1,0 +1,15 @@
+@mixin text($size, $weight: null, $color: null) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: $fontfamily-playfair;
+  text-shadow: none;
+  outline: none;
+}
+
+@mixin center() {
+  margin-left: auto;
+  margin-right: auto;
+}

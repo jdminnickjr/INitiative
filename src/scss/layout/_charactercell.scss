@@ -1,5 +1,4 @@
 .character-cell {
-  font-family: "Playfair Display SC", serif;
   display: flex;
   border: $border-main;
   letter-spacing: 2px;
@@ -8,7 +7,7 @@
   max-width: 18rem;
   margin: auto;
   h2 {
-    font-size: 1.5rem;
+    @include text(1.5rem);
     margin: -0.8rem 0 0rem 2rem;
     max-width: 5rem;
   }
@@ -19,25 +18,21 @@
 }
 
 .remove-player {
+  @include text(1.15rem, $color: $color-main);
   z-index: 1;
-  font-size: 1.15em;
   border: none;
-  outline: none;
-  color: $color-main;
   cursor: pointer;
   background: none;
 }
 
 .initiative-display {
-  font-family: "Playfair Display SC", serif;
+  @include text(1.6rem, $color: $color-text);
   border: $border-main;
   max-width: 3rem;
   min-width: 3rem;
-  font-size: 1.6rem;
-  color: $color-text;
   background-color: $color-background-type;
-  padding: 0.3rem;
-  border-radius: 13%;
+  padding: 0.5rem;
+  border-radius: $border-radius;
   align-self: center;
   text-align: center;
   margin-left: auto;
@@ -61,7 +56,6 @@
 .character-cell--active {
   animation: glow 800ms ease-out infinite alternate;
   height: 4rem;
-  border: solid;
 }
 
 @keyframes glow {
