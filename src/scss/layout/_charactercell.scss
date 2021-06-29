@@ -4,7 +4,8 @@
   letter-spacing: 2px;
   background-color: $color-background-cell;
   height: 4rem;
-  max-width: 57vw;
+  min-width: 18rem;
+  max-width: 18rem;
   margin: auto;
   h2 {
     @include text(1.5rem);

@@ -14,7 +14,7 @@
     margin-top: 1rem;
   }
   @media #{$break-med} {
-    min-width: fit-content;
+    min-width: 100vw;
     min-height: 60rem;
     background-image: url(../components/images/INit_background_full.png);
     background-repeat: no-repeat;

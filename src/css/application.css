@@ -68,7 +68,7 @@ div {
 }
 @media (min-width: 852px) {
   .app-board {
-    min-width: fit-content;
+    min-width: 100vw;
     min-height: 60rem;
     background-image: url(../components/images/INit_background_full.png);
     background-repeat: no-repeat;
@@ -109,7 +109,8 @@ div {
 }
 @media (min-width: 852px) {
   .fight {
-    left: -12rem;
+    left: -17rem;
+    top: -5rem;
     height: 8rem;
     width: 8rem;
     font-size: 1.8rem;
@@ -147,7 +148,8 @@ div {
 @media (min-width: 852px) {
   .round-tracker {
     position: absolute;
-    left: 15rem;
+    left: 19rem;
+    top: -4rem;
   }
 }
 
@@ -214,6 +216,11 @@ div {
   width: 10rem;
   height: 10rem;
 }
+@media (min-width: 852px) {
+  .top {
+    height: 5rem;
+  }
+}
 
 .character-cell {
   display: flex;
@@ -221,7 +228,8 @@ div {
   letter-spacing: 2px;
   background-color: rgba(255, 255, 255, 0.3);
   height: 4rem;
-  max-width: 57vw;
+  min-width: 18rem;
+  max-width: 18rem;
   margin: auto;
 }
 .character-cell h2 {
