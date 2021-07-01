@@ -4,9 +4,11 @@
   color: $color-text;
   width: 14rem;
   text-align: center;
-  margin: auto;
+  margin: 1.5rem;
   background-color: $color-background-type;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  grid-row: 2;
+  grid-column: 2;
   h2 {
     font-size: 2rem;
     margin: 0;

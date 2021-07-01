@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import InitInput from "./InitInput.js";
 
 const AddCharacter = (props) => {
-  const [characterName, setCharacterName] = useState("");
-  const [characterInit, setCharacterInit] = useState(0);
-  const [characterType, setCharacterType] = useState("pc");
+  var [characterName, setCharacterName] = useState("");
+  var [characterInit, setCharacterInit] = useState(0);
+  var [characterType, setCharacterType] = useState("pc");
+  var [errorMessage, setErrorMessage] = useState('');
   const handleUpdateInitiative = (val) => {
     setCharacterInit(val);
   };
@@ -24,13 +25,18 @@ const AddCharacter = (props) => {
   };
 
   const handleValidation = () => {
-    if (characterName.value === "") {
-      console.log("error")
-      window.alert("Please add character name");
-    } else if ((isNaN(characterInit))) {
-      window.alert('Please include your initiative roll')
-    } else {createCharacter()}
+    if (characterName.length === 0) {
+      setErrorMessage('Please include your Characters name!')
+    } else {
+      createCharacter()
+      setErrorMessage('')
+      setCharacterName('')
+      setCharacterInit(0)
+      setCharacterType('pc')
+    }
   };
+
+
 
   return (
     <div className="add-character">
@@ -44,6 +50,9 @@ const AddCharacter = (props) => {
           onInput={(e) => setCharacterName(e.target.value)}
         />
       </span>
+      {errorMessage && (
+        <p className="error"> {errorMessage} </p>
+          )}
 
       <InitInput
         characterInit={characterInit}
